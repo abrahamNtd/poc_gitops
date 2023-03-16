@@ -1,6 +1,6 @@
-actions:
- scritp: post_deploy_actios.py
-  location: scripts
+---
+- scritp: "scripts/post_deploy_actions.py"
+  interpreter: "python3"
   parameters:
-    - action: list_directory
-    - directory: parent
+    - "list_directory"
+    - "parent"
