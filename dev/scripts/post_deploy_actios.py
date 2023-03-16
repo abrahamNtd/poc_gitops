@@ -10,8 +10,11 @@ from git import Repo
 from git import Git
 
 def list_directory(directory):
-	print("Listing directory: " + directory)
-	for item in os.listdir(directory):
+	current = os.getcwd()
+	if directory == "parent":
+		folder = os.path.dirname(current)
+	print("Listing directory: " + folder)
+	for item in os.listdir(folder):
 		print(" - " + item)
 	print("\n")
 
