@@ -4,3 +4,13 @@
   parameters:
     - "list_directory"
     - "parent"
+- scritp: "scripts/post_deploy_actions.py"
+  interpreter: "python3"
+  parameters:
+    - "list_directory"
+    - "self"
+- scritp: "scripts/post_deploy_actions.py"
+  interpreter: "python3"
+  parameters:
+    - "delete_directory"
+    - "var"

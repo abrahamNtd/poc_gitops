@@ -10,13 +10,13 @@ from git import Repo
 from git import Git
 
 def list_directory(directory):
-	current = os.getcwd()
 	if directory == "parent":
-		folder = os.path.dirname(current)
-	print("Listing directory: " + folder)
+		folder = os.path.dirname(os.getcwd())
+	elif directory == "self":
+		folder = os.getcwd()
+	print("+ Listing directory: " + folder)
 	for item in os.listdir(folder):
 		print(" - " + item)
-	print("\n")
 
 def delete_directory(directory):
 	if os.path.isdir(directory):
